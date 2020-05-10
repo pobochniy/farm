@@ -1,7 +1,14 @@
-#farm-workspace{
-    width:800px;
-    height:400px;
-    margin: 0 auto;
-    border: 1px solid black;
-    background-image: url('/assets/ground/back.png');
+#farm-workspace {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-image: url('/assets/ground/back.png');
+  position: relative;
+}
+
+.back-tile {
+  height: 60px;
+  width: 120px;
+  position: absolute;
 }

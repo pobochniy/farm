@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FirstComponent } from './first/first.component';
 import { WorkmapRoutingModule } from './workmap-routing.module';
 import { WorkmapComponent } from './workmap.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { WorkmapComponent } from './workmap.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     WorkmapRoutingModule
   ]
 })
