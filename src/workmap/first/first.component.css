@@ -1,8 +1,15 @@
-#farm-workspace {
-  width: 800px;
+#farm-camera {
+  width: 600px;
   height: 400px;
   margin: 0 auto;
+  overflow: hidden;
   border: 1px solid black;
+}
+
+#farm-workspace {
+  transform: translate(-60px, -20px);
+  width: 1200px;
+  height: 800px;
   background-image: url('/assets/ground/back.png');
   position: relative;
 }
