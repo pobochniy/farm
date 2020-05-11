@@ -25,9 +25,8 @@ export class FirstComponent implements OnInit {
         img.src = `/assets/ground/${this.map.cells[i][j]}.png`;
         img.style.left = cssLeft + 'px';
         img.style.top = cssTop + 'px';
-        img.style.position = 'absolute';
-        el.append(img);
         img.classList.add('back-tile');
+        el.append(img);
       }
     }
   }
