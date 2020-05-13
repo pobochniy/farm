@@ -14,8 +14,8 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {
     this.fillMap();
     var el = document.getElementById('farm-workspace');
-    var parentHeight = 100;
-    var parentWidth = 300;
+    var parentHeight = el.clientHeight / 2 - this.map.medianaY * 55;
+    var parentWidth = el.clientWidth / 2;
 
     for (let i = 0; i < this.map.cells.length; i++) {
       for (let j = 0; j < this.map.cells[0].length; j++) {
@@ -26,6 +26,11 @@ export class FirstComponent implements OnInit {
         img.style.left = cssLeft + 'px';
         img.style.top = cssTop + 'px';
         img.classList.add('back-tile');
+        img.draggable = true;
+        img.ondragstart = function (e) {
+          e.preventDefault();
+        };
+
         el.append(img);
       }
     }
