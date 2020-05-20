@@ -19,8 +19,8 @@ export class FirstComponent implements OnInit {
 
     for (let i = 0; i < this.map.cells.length; i++) {
       for (let j = 0; j < this.map.cells[0].length; j++) {
-        let cssLeft = parentWidth + i * 55 - j * 55;
-        let cssTop = parentHeight + i * 21 + j * 21;
+        let cssLeft = parentWidth + i * 29 - j * 29;
+        let cssTop = parentHeight + i * 29 + j * 29;
         var img = document.createElement('img');
         img.src = `/assets/ground/${this.map.cells[i][j]}.png`;
         img.style.left = cssLeft + 'px';
@@ -38,17 +38,23 @@ export class FirstComponent implements OnInit {
 
   private fillMap() {
     this.map = new Map();
-    this.map.cells =
-      [['yt', 'p', 'p', 'p', 'yl'],
-      ['p', 'p', 'p', 'p', 'p'],
-      ['p', 'p', 'p', 'p', 'p'],
-      ['p', 'p', 'p', 'p', 'p'],
-      ['yr', 'p', 'p', 'p', 'yb']]
+    for (let i = 0; i < 10; i++) {
+      for (let j = 0; j < 10; j++) {
+        if (!this.map.cells[i]) this.map.cells[i] = [];
+        this.map.cells[i][j] = 'z';
+      }
+    }
+    //this.map.cells =
+    //  [['yt', 'p', 'p', 'p', 'yl'],
+    //  ['p', 'p', 'p', 'p', 'p'],
+    //  ['p', 'p', 'p', 'p', 'p'],
+    //  ['p', 'p', 'p', 'p', 'p'],
+    //  ['yr', 'p', 'p', 'p', 'yb']]
   }
 }
 
 export class Map {
-  public cells: string[][];
+  public cells: string[][] = [];
 
   public get medianaX(): number {
     if (!this.cells) return 0;

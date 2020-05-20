@@ -15,7 +15,6 @@
 }
 
 /deep/.back-tile {
-  height: 60px;
-  width: 120px;
+  transform: rotate(45deg);
   position: absolute;
 }
