@@ -19,27 +19,27 @@ export class FirstComponent implements OnInit {
 
     for (let i = 0; i < this.map.cells.length; i++) {
       for (let j = 0; j < this.map.cells[0].length; j++) {
-        let cssLeft = parentWidth + i * 29 - j * 29;
-        let cssTop = parentHeight + i * 29 + j * 29;
-        var img = document.createElement('img');
-        img.src = `/assets/ground/${this.map.cells[i][j]}.png`;
-        img.style.left = cssLeft + 'px';
-        img.style.top = cssTop + 'px';
-        img.classList.add('back-tile');
-        img.draggable = true;
-        img.ondragstart = function (e) {
+        //let cssLeft = parentWidth + i * 29 - j * 29;
+        //let cssTop = parentHeight + i * 29 + j * 29;
+        var div = document.createElement('div');
+        div.style.backgroundImage = `url('/assets/ground/${this.map.cells[i][j]}.png')`;
+        //img.style.left = cssLeft + 'px';
+        //img.style.top = cssTop + 'px';
+        div.classList.add('back-tile');
+        div.draggable = true;
+        div.ondragstart = function (e) {
           e.preventDefault();
         };
 
-        el.append(img);
+        el.append(div);
       }
     }
   }
 
   private fillMap() {
     this.map = new Map();
-    for (let i = 0; i < 10; i++) {
-      for (let j = 0; j < 10; j++) {
+    for (let i = 0; i < 30; i++) {
+      for (let j = 0; j < 30; j++) {
         if (!this.map.cells[i]) this.map.cells[i] = [];
         this.map.cells[i][j] = 'z';
       }

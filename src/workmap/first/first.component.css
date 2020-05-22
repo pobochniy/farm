@@ -4,17 +4,23 @@
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid black;
+  background-image: url('/assets/ground/back.png');
+}
+
+#farm-translate {
+  transform: translate(-60px, -20px);
 }
 
 #farm-workspace {
-  transform: translate(-60px, -20px);
+  transform: rotate(45deg);
   width: 1200px;
-  height: 800px;
-  background-image: url('/assets/ground/back.png');
-  position: relative;
+  /*height: 800px;*/
+  /*position: relative;*/
 }
 
 /deep/.back-tile {
-  transform: rotate(45deg);
-  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  /*position: absolute;*/
 }

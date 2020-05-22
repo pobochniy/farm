@@ -19,10 +19,11 @@ export class StrafeCameraDirective {
   ngAfterViewInit() {
     this.el = document.getElementById('farm-camera');
     this.el.addEventListener('mousedown', this.onDown.bind(this));
-    this.el.addEventListener('mouseup', this.onUp.bind(this));
-    this.el.addEventListener('mouseout', this.onMouseout.bind(this));
+    //this.el.addEventListener('mouseup', this.onUp.bind(this));
+    //this.el.addEventListener('mouseout', this.onMouseout.bind(this));
     this.el.addEventListener('wheel', this.onWheel.bind(this));
     document.addEventListener('mousemove', this.onMove.bind(this));
+    document.addEventListener('mouseup', this.onUp.bind(this));
     //this.startHeight = (this.element.nativeElement as HTMLElement).offsetHeight;
   }
 
