@@ -8,7 +8,9 @@
 }
 
 #farm-translate {
+  will-change: transform;
   transform: translate(-60px, -20px);
+  transition: transform 100ms linear;
 }
 
 #farm-workspace {

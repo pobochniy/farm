@@ -25,7 +25,7 @@ export class FirstComponent implements OnInit {
         div.style.backgroundImage = `url('/assets/ground/${this.map.cells[i][j]}.png')`;
         //img.style.left = cssLeft + 'px';
         //img.style.top = cssTop + 'px';
-        div.classList.add('back-tile');
+        div.className = 'back-tile';
         div.draggable = true;
         div.ondragstart = function (e) {
           e.preventDefault();
